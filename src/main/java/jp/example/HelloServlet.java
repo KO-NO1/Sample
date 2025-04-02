@@ -17,6 +17,7 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		req.setAttribute("message", requireNonNullElse(req.getParameter("name"), "World"));
 		req.setAttribute("mes2","テスト");
+		req.setAttribute("mes3","テスト２");
 		
 		req.getRequestDispatcher("/WEB-INF/view/hello.jsp").forward(req, res);
 	}
